@@ -70,7 +70,7 @@ internal class Program
         mail.From = new("cemkeskin12@gmail.com", displayName);
 
         SmtpClient smtp = new();
-        smtp.Credentials = new NetworkCredential("apikey", "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");
+        smtp.Credentials = new NetworkCredential("apikey", "pass");
         smtp.Port = 587;
         smtp.EnableSsl = true;
         smtp.Host = "smtp.sendgrid.net";
