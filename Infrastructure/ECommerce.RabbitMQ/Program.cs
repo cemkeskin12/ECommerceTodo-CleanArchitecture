@@ -16,7 +16,7 @@ internal class Program
 
         var factory = new ConnectionFactory
         {
-            Uri = new Uri("amqps://dbhwosdy:kaPv9awYo7O_SsHHj01L2QInn8zbm4GZ@woodpecker.rmq.cloudamqp.com/dbhwosdy")
+            Uri = new Uri("amqps://dbhwosdy:pass@woodpecker.rmq.cloudamqp.com/dbhwosdy")
         };
 
 
