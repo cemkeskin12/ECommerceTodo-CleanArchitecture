@@ -1,0 +1,35 @@
+﻿@using ECommerce.Application.Features.Subcategories.Queries.GetAllSubcategories
+@model IList<GetAllSubcategoriesQueryResponse>
+<h2>Kategoriler</h2>
+<div class="panel-group category-products" id="accordian">
+    <!--category-productsr-->
+    @foreach (var item in Model)
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordian" href="#@item.CategoryName">
+                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                        @item.CategoryName
+                    </a>
+                </h4>
+            </div>
+            <div id="@item.CategoryName" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        @foreach (var subcats in item.Name)
+                        {
+                            <li><a href="#">@subcats </a></li>
+
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a href="#">Kids</a></h4>
+        </div>
+    </div>
+</div>
