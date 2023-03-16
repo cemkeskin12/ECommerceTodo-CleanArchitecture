@@ -1,5 +1,6 @@
 using ECommerce.Application;
 using ECommerce.Application.Exceptions;
+using ECommerce.ElasticSearch;
 using ECommerce.Infrastructure;
 using ECommerce.Infrastructure.Services.Storage.Azure;
 using ECommerce.Mapper;
@@ -8,8 +9,6 @@ using ECommerce.WebApi.Filters;
 using ECommerce.WebApi.Middlewares;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
-using Swashbuckle.AspNetCore.SwaggerGen;
-using System.Reflection;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +25,8 @@ builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddCustomMapper();
 builder.Services.AddStorage<AzureStorage>();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddElasticSearch();
+
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddMvc(option =>

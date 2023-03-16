@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Elasticsearch.Net" Version="7.17.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
       <PrivateAssets>all</PrivateAssets>
@@ -21,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\ECommerce.Application\ECommerce.Application.csproj" />
+    <ProjectReference Include="..\..\..\Core\ECommerce.ElasticSearch\ECommerce.ElasticSearch.csproj" />
     <ProjectReference Include="..\..\..\Core\ECommerce.Mapper\ECommerce.Mapper.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\ECommerce.Infrastructure\ECommerce.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\ECommerce.Persistence\ECommerce.Persistence.csproj" />

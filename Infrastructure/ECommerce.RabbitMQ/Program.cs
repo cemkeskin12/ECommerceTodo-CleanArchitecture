@@ -16,7 +16,7 @@ internal class Program
 
         var factory = new ConnectionFactory
         {
-            Uri = new Uri("amqps://dbhwosdy:pass@woodpecker.rmq.cloudamqp.com/dbhwosdy")
+            Uri = new Uri("amqps://dbhwosdy:as@woodpecker.rmq.cloudamqp.com/dbhwosdy")
         };
 
 
@@ -70,7 +70,7 @@ internal class Program
         mail.From = new("cemkeskin12@gmail.com", displayName);
 
         SmtpClient smtp = new();
-        smtp.Credentials = new NetworkCredential("apikey", "pass");
+        smtp.Credentials = new NetworkCredential("apikey", "SG.as.as");
         smtp.Port = 587;
         smtp.EnableSsl = true;
         smtp.Host = "smtp.sendgrid.net";
