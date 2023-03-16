@@ -66,6 +66,10 @@ artifacts/
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
 
+# AppSettings
+
+AppSettings.json
+
 # StyleCop
 StyleCopReport.xml
 
@@ -361,3 +365,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Presentation/Api/ECommerce.WebApi/appsettings.json
